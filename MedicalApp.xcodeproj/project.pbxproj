@@ -14,12 +14,31 @@
 		5528F82C230771C0006FAF58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5528F82B230771C0006FAF58 /* GoogleService-Info.plist */; };
 		5528F82F230779C2006FAF58 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5528F82E230779C2006FAF58 /* AuthService.swift */; };
 		5528F83423077AC3006FAF58 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5528F83323077AC3006FAF58 /* User.swift */; };
-		5528F83623078027006FAF58 /* newUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5528F83523078027006FAF58 /* newUser.storyboard */; };
+		5528F83623078027006FAF58 /* NewUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5528F83523078027006FAF58 /* NewUser.storyboard */; };
+		5528F839230A6BD6006FAF58 /* NewUserScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5528F838230A6BD6006FAF58 /* NewUserScreenViewController.swift */; };
+		5528F83B230CB80C006FAF58 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5528F83A230CB80C006FAF58 /* UserInfoViewController.swift */; };
+		5528F83E230CB921006FAF58 /* GenderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5528F83D230CB921006FAF58 /* GenderCollectionViewCell.swift */; };
+		5528F840230CB9F4006FAF58 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5528F83F230CB9F4006FAF58 /* UserInfo.swift */; };
+		553309BA230DC58B00B9BC49 /* UserSetUpInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553309B9230DC58B00B9BC49 /* UserSetUpInfo.xib */; };
+		553309BF230DCB2800B9BC49 /* GenderCardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553309BE230DCB2800B9BC49 /* GenderCardUIView.swift */; };
+		553309C1230DCB4400B9BC49 /* NameCardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553309C0230DCB4400B9BC49 /* NameCardUIView.swift */; };
 		5591775C2305E20600583DEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591775B2305E20600583DEC /* AppDelegate.swift */; };
 		5591775E2305E20600583DEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591775D2305E20600583DEC /* ViewController.swift */; };
 		559177612305E20600583DEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5591775F2305E20600583DEC /* Main.storyboard */; };
 		559177632305E20700583DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 559177622305E20700583DEC /* Assets.xcassets */; };
 		559177662305E20700583DEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 559177642305E20700583DEC /* LaunchScreen.storyboard */; };
+		55955A432310B28600181C1C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55955A422310B28600181C1C /* AccountViewController.swift */; };
+		55955A452316122C00181C1C /* SymptomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55955A442316122C00181C1C /* SymptomsViewController.swift */; };
+		55955A4723161A8B00181C1C /* InfermedicalSearchSymptoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55955A4623161A8B00181C1C /* InfermedicalSearchSymptoms.swift */; };
+		55955A4923161D8300181C1C /* SecretKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55955A4823161D8300181C1C /* SecretKey.swift */; };
+		55955A4B23161E2D00181C1C /* UserBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55955A4A23161E2D00181C1C /* UserBasicInfo.swift */; };
+		55955A4D23161F0900181C1C /* SymptomsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55955A4C23161F0900181C1C /* SymptomsModel.swift */; };
+		55955A4F231707E000181C1C /* SymptomsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55955A4E231707E000181C1C /* SymptomsTableViewCell.swift */; };
+		55E56864230DFE28002E1767 /* nameUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55E56863230DFE28002E1767 /* nameUIView.xib */; };
+		55E56866230DFFEA002E1767 /* yearUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55E56865230DFFEA002E1767 /* yearUIView.xib */; };
+		55E56868230E000F002E1767 /* YearCardUIVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E56867230E000F002E1767 /* YearCardUIVView.swift */; };
+		55E5686A230E0333002E1767 /* emailUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55E56869230E0333002E1767 /* emailUIView.xib */; };
+		55E5686C230E0429002E1767 /* emialCardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E5686B230E0429002E1767 /* emialCardUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +50,14 @@
 		5528F82B230771C0006FAF58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5528F82E230779C2006FAF58 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		5528F83323077AC3006FAF58 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		5528F83523078027006FAF58 /* newUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = newUser.storyboard; sourceTree = "<group>"; };
+		5528F83523078027006FAF58 /* NewUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewUser.storyboard; sourceTree = "<group>"; };
+		5528F838230A6BD6006FAF58 /* NewUserScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserScreenViewController.swift; sourceTree = "<group>"; };
+		5528F83A230CB80C006FAF58 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		5528F83D230CB921006FAF58 /* GenderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderCollectionViewCell.swift; sourceTree = "<group>"; };
+		5528F83F230CB9F4006FAF58 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		553309B9230DC58B00B9BC49 /* UserSetUpInfo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserSetUpInfo.xib; sourceTree = "<group>"; };
+		553309BE230DCB2800B9BC49 /* GenderCardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderCardUIView.swift; sourceTree = "<group>"; };
+		553309C0230DCB4400B9BC49 /* NameCardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCardUIView.swift; sourceTree = "<group>"; };
 		559177582305E20600583DEC /* MedicalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5591775B2305E20600583DEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5591775D2305E20600583DEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +65,18 @@
 		559177622305E20700583DEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		559177652305E20700583DEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		559177672305E20700583DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55955A422310B28600181C1C /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		55955A442316122C00181C1C /* SymptomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsViewController.swift; sourceTree = "<group>"; };
+		55955A4623161A8B00181C1C /* InfermedicalSearchSymptoms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfermedicalSearchSymptoms.swift; sourceTree = "<group>"; };
+		55955A4823161D8300181C1C /* SecretKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretKey.swift; sourceTree = "<group>"; };
+		55955A4A23161E2D00181C1C /* UserBasicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBasicInfo.swift; sourceTree = "<group>"; };
+		55955A4C23161F0900181C1C /* SymptomsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsModel.swift; sourceTree = "<group>"; };
+		55955A4E231707E000181C1C /* SymptomsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsTableViewCell.swift; sourceTree = "<group>"; };
+		55E56863230DFE28002E1767 /* nameUIView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = nameUIView.xib; sourceTree = "<group>"; };
+		55E56865230DFFEA002E1767 /* yearUIView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = yearUIView.xib; sourceTree = "<group>"; };
+		55E56867230E000F002E1767 /* YearCardUIVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearCardUIVView.swift; sourceTree = "<group>"; };
+		55E56869230E0333002E1767 /* emailUIView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = emailUIView.xib; sourceTree = "<group>"; };
+		55E5686B230E0429002E1767 /* emialCardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emialCardUIView.swift; sourceTree = "<group>"; };
 		FC990FF77DD356B1DC0631FE /* Pods_MedicalApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicalApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -67,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				5591775D2305E20600583DEC /* ViewController.swift */,
+				55955A422310B28600181C1C /* AccountViewController.swift */,
+				55955A442316122C00181C1C /* SymptomsViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -84,7 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				5591775F2305E20600583DEC /* Main.storyboard */,
-				5528F83523078027006FAF58 /* newUser.storyboard */,
+				5528F83523078027006FAF58 /* NewUser.storyboard */,
 				559177642305E20700583DEC /* LaunchScreen.storyboard */,
 			);
 			path = "Story Board";
@@ -93,6 +133,7 @@
 		5528F8222307694E006FAF58 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				55955A4E231707E000181C1C /* SymptomsTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -110,6 +151,9 @@
 			isa = PBXGroup;
 			children = (
 				5528F82823076D5C006FAF58 /* InfermedicaDiagnosisAPI.swift */,
+				55955A4623161A8B00181C1C /* InfermedicalSearchSymptoms.swift */,
+				55955A4823161D8300181C1C /* SecretKey.swift */,
+				55955A4A23161E2D00181C1C /* UserBasicInfo.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -126,8 +170,50 @@
 			isa = PBXGroup;
 			children = (
 				5528F83323077AC3006FAF58 /* User.swift */,
+				55955A4C23161F0900181C1C /* SymptomsModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5528F837230A6BA2006FAF58 /* NewUserViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5528F838230A6BD6006FAF58 /* NewUserScreenViewController.swift */,
+				5528F83A230CB80C006FAF58 /* UserInfoViewController.swift */,
+				5528F83F230CB9F4006FAF58 /* UserInfo.swift */,
+				553309BB230DCAC600B9BC49 /* XIB Related Files */,
+			);
+			name = NewUserViewController;
+			sourceTree = "<group>";
+		};
+		5528F83C230CB8EA006FAF58 /* UserInfo Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5528F83D230CB921006FAF58 /* GenderCollectionViewCell.swift */,
+			);
+			path = "UserInfo Cell";
+			sourceTree = "<group>";
+		};
+		553309B8230DC49400B9BC49 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				553309B9230DC58B00B9BC49 /* UserSetUpInfo.xib */,
+				55E56863230DFE28002E1767 /* nameUIView.xib */,
+				55E56865230DFFEA002E1767 /* yearUIView.xib */,
+				55E56869230E0333002E1767 /* emailUIView.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		553309BB230DCAC600B9BC49 /* XIB Related Files */ = {
+			isa = PBXGroup;
+			children = (
+				553309BE230DCB2800B9BC49 /* GenderCardUIView.swift */,
+				553309C0230DCB4400B9BC49 /* NameCardUIView.swift */,
+				55E56867230E000F002E1767 /* YearCardUIVView.swift */,
+				55E5686B230E0429002E1767 /* emialCardUIView.swift */,
+			);
+			path = "XIB Related Files";
 			sourceTree = "<group>";
 		};
 		5591774F2305E20500583DEC = {
@@ -156,6 +242,9 @@
 				5528F82323076B23006FAF58 /* Network Helper */,
 				5528F82A23076D60006FAF58 /* API */,
 				5528F81F23076905006FAF58 /* View Controller */,
+				5528F837230A6BA2006FAF58 /* NewUserViewController */,
+				553309B8230DC49400B9BC49 /* XIB */,
+				5528F83C230CB8EA006FAF58 /* UserInfo Cell */,
 				5528F8222307694E006FAF58 /* Cells */,
 				5528F8212307693B006FAF58 /* Story Board */,
 				5528F82023076922006FAF58 /* Supporting Files */,
@@ -201,6 +290,9 @@
 		559177502305E20500583DEC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					com.apple.gamecenter.Leaderboard,
+				);
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Pursuit;
@@ -233,8 +325,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				553309BA230DC58B00B9BC49 /* UserSetUpInfo.xib in Resources */,
+				55E5686A230E0333002E1767 /* emailUIView.xib in Resources */,
 				5528F82C230771C0006FAF58 /* GoogleService-Info.plist in Resources */,
-				5528F83623078027006FAF58 /* newUser.storyboard in Resources */,
+				5528F83623078027006FAF58 /* NewUser.storyboard in Resources */,
+				55E56866230DFFEA002E1767 /* yearUIView.xib in Resources */,
+				55E56864230DFE28002E1767 /* nameUIView.xib in Resources */,
 				559177662305E20700583DEC /* LaunchScreen.storyboard in Resources */,
 				559177632305E20700583DEC /* Assets.xcassets in Resources */,
 				559177612305E20600583DEC /* Main.storyboard in Resources */,
@@ -299,12 +395,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55955A4723161A8B00181C1C /* InfermedicalSearchSymptoms.swift in Sources */,
 				5528F82723076D17006FAF58 /* NetworkHelper.swift in Sources */,
+				553309BF230DCB2800B9BC49 /* GenderCardUIView.swift in Sources */,
+				55955A432310B28600181C1C /* AccountViewController.swift in Sources */,
+				5528F83E230CB921006FAF58 /* GenderCollectionViewCell.swift in Sources */,
 				5591775E2305E20600583DEC /* ViewController.swift in Sources */,
+				553309C1230DCB4400B9BC49 /* NameCardUIView.swift in Sources */,
 				5591775C2305E20600583DEC /* AppDelegate.swift in Sources */,
 				5528F82F230779C2006FAF58 /* AuthService.swift in Sources */,
+				55955A4923161D8300181C1C /* SecretKey.swift in Sources */,
+				5528F83B230CB80C006FAF58 /* UserInfoViewController.swift in Sources */,
+				55955A4B23161E2D00181C1C /* UserBasicInfo.swift in Sources */,
 				5528F82923076D5C006FAF58 /* InfermedicaDiagnosisAPI.swift in Sources */,
+				5528F839230A6BD6006FAF58 /* NewUserScreenViewController.swift in Sources */,
+				55E5686C230E0429002E1767 /* emialCardUIView.swift in Sources */,
+				55955A452316122C00181C1C /* SymptomsViewController.swift in Sources */,
 				5528F82523076B41006FAF58 /* AppError.swift in Sources */,
+				55955A4F231707E000181C1C /* SymptomsTableViewCell.swift in Sources */,
+				5528F840230CB9F4006FAF58 /* UserInfo.swift in Sources */,
+				55955A4D23161F0900181C1C /* SymptomsModel.swift in Sources */,
+				55E56868230E000F002E1767 /* YearCardUIVView.swift in Sources */,
 				5528F83423077AC3006FAF58 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

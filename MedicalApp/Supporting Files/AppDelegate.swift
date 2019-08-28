@@ -13,13 +13,29 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-    static var authservice =
-
-    FirebaseApp.configure()
+//    NewUserViewController
+    static var authservice = AuthService()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        FirebaseApp.configure()
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        if let _ = AppDelegate.authservice.getCurrentUser() {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let mainPage = storyboard.instantiateViewController(withIdentifier: "mainPage") as! ViewController
+            window?.rootViewController = mainPage
+        } else {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let mainPage = storyboard.instantiateViewController(withIdentifier: "mainPage") as! UITabBarController
+                window?.rootViewController = mainPage
+//            let storyboard = UIStoryboard(name: "NewUser", bundle: nil)
+//            let userViewController = storyboard.instantiateViewController(withIdentifier: "newUser") as! NewUserViewController
+//            window?.rootViewController = UINavigationController(rootViewController: userViewController)
+//            print("broken")
+        }
+        window?.makeKeyAndVisible()
+
         return true
     }
 

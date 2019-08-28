@@ -1,7 +1,161 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9WW-av-qYh">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--New User View Controller-->
+        <scene sceneID="xZf-tK-IyD">
+            <objects>
+                <viewController storyboardIdentifier="newUser" id="qfR-Aw-eaT" customClass="NewUserViewController" customModule="MedicalApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PGC-jM-TWg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medadigeResized" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cbe-um-0CA">
+                                <rect key="frame" x="116" y="87" width="182" height="143"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c87-lT-57a">
+                                <rect key="frame" x="20" y="832" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2h-l8-KnH">
+                                <rect key="frame" x="101" y="433" width="212" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="Check My Symptoms">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="udY-No-hTd" kind="show" id="pQX-3Y-4SC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.20850745130000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Cbe-um-0CA" firstAttribute="height" secondItem="PGC-jM-TWg" secondAttribute="height" multiplier="0.16" id="0ei-FB-Obf"/>
+                            <constraint firstItem="Cbe-um-0CA" firstAttribute="width" secondItem="PGC-jM-TWg" secondAttribute="width" multiplier="0.44" id="57w-wj-GQW"/>
+                            <constraint firstItem="Cbe-um-0CA" firstAttribute="centerY" secondItem="BtW-lE-0lr" secondAttribute="centerY" multiplier="0.35" id="Cni-uh-i89"/>
+                            <constraint firstItem="Cbe-um-0CA" firstAttribute="centerX" secondItem="BtW-lE-0lr" secondAttribute="centerX" id="ilE-BV-JlR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BtW-lE-0lr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nkc-qf-Ckr"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pRt-jA-OZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="826.08695652173924" y="5.3571428571428568"/>
+        </scene>
+        <!--User Info View Controller-->
+        <scene sceneID="75Z-5y-FmB">
+            <objects>
+                <viewController id="udY-No-hTd" customClass="UserInfoViewController" customModule="MedicalApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cq7-5G-9Lw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZu-Hm-clu" customClass="GenderCardUIView" customModule="MedicalApp" customModuleProvider="target">
+                                <rect key="frame" x="62" y="373" width="290" height="250.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pac-ID-bbe" customClass="NameCardUIView" customModule="MedicalApp" customModuleProvider="target">
+                                <rect key="frame" x="62" y="373" width="290" height="250.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rF2-5T-tlw" customClass="YearCardUIVView" customModule="MedicalApp" customModuleProvider="target">
+                                <rect key="frame" x="62" y="364" width="290" height="268.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YlQ-QP-CXU" customClass="emialCardUIView" customModule="MedicalApp" customModuleProvider="target">
+                                <rect key="frame" x="62" y="364" width="290" height="268.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Welcome to Medadige" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTc-7c-RJg">
+                                <rect key="frame" x="20.5" y="386.5" width="373" height="89.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We want to get to know you better to provide more accurate information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTD-ZX-yCd">
+                                <rect key="frame" x="20.5" y="476" width="373" height="90"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.20850745130000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="AZu-Hm-clu" firstAttribute="height" secondItem="Cq7-5G-9Lw" secondAttribute="height" multiplier="0.28" id="2WQ-bP-gk4"/>
+                            <constraint firstItem="YlQ-QP-CXU" firstAttribute="height" secondItem="Cq7-5G-9Lw" secondAttribute="height" multiplier="0.3" id="583-uv-obC"/>
+                            <constraint firstItem="pac-ID-bbe" firstAttribute="centerX" secondItem="872-cX-nmA" secondAttribute="centerX" id="7MM-sR-0mz"/>
+                            <constraint firstItem="JTc-7c-RJg" firstAttribute="width" secondItem="Cq7-5G-9Lw" secondAttribute="width" multiplier="0.9" id="8Li-rO-de8"/>
+                            <constraint firstItem="AZu-Hm-clu" firstAttribute="centerX" secondItem="872-cX-nmA" secondAttribute="centerX" id="8kO-QK-DfE"/>
+                            <constraint firstItem="mTD-ZX-yCd" firstAttribute="centerY" secondItem="872-cX-nmA" secondAttribute="centerY" multiplier="1.15" id="Eik-2C-TKJ"/>
+                            <constraint firstItem="JTc-7c-RJg" firstAttribute="height" secondItem="Cq7-5G-9Lw" secondAttribute="height" multiplier="0.1" id="KdD-i7-2a1"/>
+                            <constraint firstItem="rF2-5T-tlw" firstAttribute="width" secondItem="Cq7-5G-9Lw" secondAttribute="width" multiplier="0.7" id="MDw-It-VUv"/>
+                            <constraint firstItem="pac-ID-bbe" firstAttribute="width" secondItem="Cq7-5G-9Lw" secondAttribute="width" multiplier="0.7" id="MV6-n2-QOY"/>
+                            <constraint firstItem="JTc-7c-RJg" firstAttribute="centerX" secondItem="872-cX-nmA" secondAttribute="centerX" id="OLr-Xd-AXk"/>
+                            <constraint firstItem="mTD-ZX-yCd" firstAttribute="centerX" secondItem="872-cX-nmA" secondAttribute="centerX" id="PbI-yg-W0h"/>
+                            <constraint firstItem="mTD-ZX-yCd" firstAttribute="width" secondItem="Cq7-5G-9Lw" secondAttribute="width" multiplier="0.9" id="RMG-ez-EfX"/>
+                            <constraint firstItem="pac-ID-bbe" firstAttribute="centerY" secondItem="872-cX-nmA" secondAttribute="centerY" multiplier="1.1" id="S0M-VZ-sVE"/>
+                            <constraint firstItem="mTD-ZX-yCd" firstAttribute="firstBaseline" secondItem="JTc-7c-RJg" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="Sam-8h-a9n"/>
+                            <constraint firstItem="rF2-5T-tlw" firstAttribute="centerX" secondItem="872-cX-nmA" secondAttribute="centerX" id="TGZ-yC-MZW"/>
+                            <constraint firstItem="AZu-Hm-clu" firstAttribute="centerY" secondItem="872-cX-nmA" secondAttribute="centerY" multiplier="1.1" id="U5c-tT-jkZ"/>
+                            <constraint firstItem="rF2-5T-tlw" firstAttribute="height" secondItem="Cq7-5G-9Lw" secondAttribute="height" multiplier="0.3" id="b1i-pj-PD9"/>
+                            <constraint firstItem="YlQ-QP-CXU" firstAttribute="centerX" secondItem="872-cX-nmA" secondAttribute="centerX" id="h2u-RL-r7B"/>
+                            <constraint firstItem="rF2-5T-tlw" firstAttribute="centerY" secondItem="872-cX-nmA" secondAttribute="centerY" multiplier="1.1" id="jZT-SR-6Mr"/>
+                            <constraint firstItem="AZu-Hm-clu" firstAttribute="width" secondItem="Cq7-5G-9Lw" secondAttribute="width" multiplier="0.7" id="pEj-rQ-kiz"/>
+                            <constraint firstItem="YlQ-QP-CXU" firstAttribute="centerY" secondItem="872-cX-nmA" secondAttribute="centerY" multiplier="1.1" id="pZm-Bd-jnM"/>
+                            <constraint firstItem="mTD-ZX-yCd" firstAttribute="height" secondItem="Cq7-5G-9Lw" secondAttribute="height" multiplier="0.1" id="rdh-By-kbL"/>
+                            <constraint firstItem="pac-ID-bbe" firstAttribute="height" secondItem="Cq7-5G-9Lw" secondAttribute="height" multiplier="0.28" id="udG-YE-UQo"/>
+                            <constraint firstItem="YlQ-QP-CXU" firstAttribute="width" secondItem="Cq7-5G-9Lw" secondAttribute="width" multiplier="0.7" id="yul-3u-EZu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="872-cX-nmA"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailCardView" destination="YlQ-QP-CXU" id="0YT-F7-6lb"/>
+                        <outlet property="genderCardView" destination="AZu-Hm-clu" id="7Gz-zy-Zh8"/>
+                        <outlet property="getToKnowYouLabel" destination="JTc-7c-RJg" id="MT7-nc-Jue"/>
+                        <outlet property="nameCardView" destination="pac-ID-bbe" id="RYz-7Z-9fT"/>
+                        <outlet property="reasonWhyWeNeedMoreInfoLabl" destination="mTD-ZX-yCd" id="oBk-Ey-Qg9"/>
+                        <outlet property="yearCardView" destination="rF2-5T-tlw" id="0tX-Bu-szx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LA1-bn-KOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1886.9565217391305" y="4.6875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8ql-eo-1K4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9WW-av-qYh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jl5-AO-eTN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qfR-Aw-eaT" kind="relationship" relationship="rootViewController" id="1x4-xF-feN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Yq-SX-3Xx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-84.057971014492765" y="5.3571428571428568"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="medadigeResized" width="1483" height="1188"/>
+    </resources>
 </document>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YearCardUIVView" customModule="MedicalApp" customModuleProvider="target">
+            <connections>
+                <outlet property="doneButton" destination="m5O-de-tVI" id="Cqj-u9-Hgq"/>
+                <outlet property="yearButton" destination="nX8-dy-Nei" id="i8J-Fm-Der"/>
+                <outlet property="yearPicker" destination="tYn-Mz-tzd" id="Ujc-Tx-SkP"/>
+                <outlet property="yearTextView" destination="vA0-Vb-eLU" id="Biw-q0-agX"/>
+                <outlet property="yearView" destination="iN0-l3-epB" id="FdY-c5-9x5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="297"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What year were you born?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6D-ef-2Za">
+                    <rect key="frame" x="15" y="54" width="270" height="30"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2019" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vA0-Vb-eLU">
+                    <rect key="frame" x="120" y="94" width="60" height="27"/>
+                    <color key="textColor" red="0.2478208405" green="0.30946674660000001" blue="1" alpha="0.46275718170000002" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <pickerView alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tYn-Mz-tzd">
+                    <rect key="frame" x="0.0" y="143" width="300" height="154"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nX8-dy-Nei">
+                    <rect key="frame" x="120" y="95.5" width="60" height="24"/>
+                    <connections>
+                        <action selector="yearButtonAction:" destination="-1" eventType="touchUpInside" id="jRP-pL-Dke"/>
+                    </connections>
+                </button>
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5O-de-tVI">
+                    <rect key="frame" x="255" y="113" width="45" height="30"/>
+                    <state key="normal" title="Done"/>
+                    <connections>
+                        <action selector="dismissYearPicker:" destination="-1" eventType="touchUpInside" id="ZR7-IW-TZV"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="nX8-dy-Nei" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.2" id="0hI-kI-Uu4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tYn-Mz-tzd" secondAttribute="trailing" id="3wh-NI-xZb"/>
+                <constraint firstItem="nX8-dy-Nei" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.08" id="7Vw-a3-AdX"/>
+                <constraint firstItem="f6D-ef-2Za" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="7ZO-6g-ZbH"/>
+                <constraint firstItem="vA0-Vb-eLU" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" multiplier="0.7" id="8bG-0b-h7E"/>
+                <constraint firstItem="f6D-ef-2Za" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.1" id="CfK-ju-98y"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="m5O-de-tVI" secondAttribute="trailing" id="Ew2-Ax-xcr"/>
+                <constraint firstItem="f6D-ef-2Za" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" multiplier="0.45" id="FXX-w7-ZuO"/>
+                <constraint firstItem="tYn-Mz-tzd" firstAttribute="top" secondItem="vA0-Vb-eLU" secondAttribute="bottom" constant="22" id="G01-Xp-3ft"/>
+                <constraint firstItem="nX8-dy-Nei" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Hcw-O6-OWI"/>
+                <constraint firstItem="m5O-de-tVI" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.1" id="Tcg-h9-LDf"/>
+                <constraint firstItem="tYn-Mz-tzd" firstAttribute="top" secondItem="m5O-de-tVI" secondAttribute="bottom" id="bnl-Ua-k64"/>
+                <constraint firstItem="m5O-de-tVI" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.15" id="emd-I6-WE0"/>
+                <constraint firstItem="tYn-Mz-tzd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ewL-rs-Nks"/>
+                <constraint firstAttribute="bottom" secondItem="tYn-Mz-tzd" secondAttribute="bottom" id="i04-Cg-l22"/>
+                <constraint firstItem="vA0-Vb-eLU" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.09" id="o1d-fV-6lw"/>
+                <constraint firstItem="nX8-dy-Nei" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" multiplier="0.7" id="qx1-o4-BJm"/>
+                <constraint firstItem="vA0-Vb-eLU" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="seY-OV-p9V"/>
+                <constraint firstItem="f6D-ef-2Za" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.9" id="wmZ-gl-Cw8"/>
+                <constraint firstItem="vA0-Vb-eLU" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.2" id="xE1-8I-erV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="47.826086956521742" y="82.03125"/>
+        </view>
+    </objects>
+</document>
