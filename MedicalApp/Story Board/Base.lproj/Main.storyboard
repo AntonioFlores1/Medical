@@ -118,6 +118,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="lA1-v3-tIY"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lwz-bd-WAL">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -187,19 +188,60 @@
                                     <constraint firstItem="kPG-ir-AWb" firstAttribute="leading" secondItem="uge-ow-cV2" secondAttribute="leading" constant="150" id="xVn-fj-IRg"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aql-iW-iMf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kuj-Ce-zxa">
+                                <rect key="frame" x="0.0" y="178.5" width="310.5" height="448"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="humanSymptoms" rowHeight="68" id="2YC-lh-sv3" customClass="HumanSymptomsTableViewCell" customModule="MedicalApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="310.5" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2YC-lh-sv3" id="Yqo-BQ-Obd">
+                                            <rect key="frame" x="0.0" y="0.0" width="310.5" height="67.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf7-z2-75U">
+                                                    <rect key="frame" x="8" y="23.5" width="232.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9Y-c0-uub">
+                                                    <rect key="frame" x="240.5" y="10" width="46.5" height="47.5"/>
+                                                    <state key="normal" backgroundImage="download (3)"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="F9Y-c0-uub" firstAttribute="centerY" secondItem="Yqo-BQ-Obd" secondAttribute="centerY" id="0bg-dj-uwP"/>
+                                                <constraint firstItem="F9Y-c0-uub" firstAttribute="width" secondItem="Yqo-BQ-Obd" secondAttribute="width" multiplier="0.15" id="7dX-2M-H9j"/>
+                                                <constraint firstItem="Bf7-z2-75U" firstAttribute="centerY" secondItem="Yqo-BQ-Obd" secondAttribute="centerY" id="Bn7-Do-nM9"/>
+                                                <constraint firstItem="F9Y-c0-uub" firstAttribute="centerX" secondItem="Yqo-BQ-Obd" secondAttribute="centerX" multiplier="1.7" id="b6L-yM-Rm8"/>
+                                                <constraint firstItem="Bf7-z2-75U" firstAttribute="centerX" secondItem="Yqo-BQ-Obd" secondAttribute="centerX" multiplier="0.8" id="fMj-mq-clg"/>
+                                                <constraint firstItem="F9Y-c0-uub" firstAttribute="height" secondItem="Yqo-BQ-Obd" secondAttribute="height" multiplier="0.7" id="w4I-Eq-tYR"/>
+                                                <constraint firstItem="Bf7-z2-75U" firstAttribute="width" secondItem="Yqo-BQ-Obd" secondAttribute="width" multiplier="0.75" id="x7h-yZ-jak"/>
+                                                <constraint firstItem="Bf7-z2-75U" firstAttribute="height" secondItem="Yqo-BQ-Obd" secondAttribute="height" multiplier="0.3" id="y0L-XL-R0H"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="deleteButton" destination="F9Y-c0-uub" id="hRb-uz-39M"/>
+                                            <outlet property="symptoms" destination="Bf7-z2-75U" id="52i-Yq-XKv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aql-iW-iMf">
                                 <rect key="frame" x="20.5" y="161.5" width="373" height="448"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.044042421569999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="1" green="0.0" blue="0.044042421569999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="symptoms" rowHeight="76" id="APh-sg-jLh" customClass="SymptomsTableViewCell" customModule="MedicalApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="373" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="APh-sg-jLh" id="xO5-hK-Ket">
-                                            <rect key="frame" x="0.0" y="0.0" width="373" height="75.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="373" height="76"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CX-r1-9BV">
-                                                    <rect key="frame" x="8.5" y="11.5" width="372.5" height="52.5"/>
+                                                    <rect key="frame" x="7.5" y="11.5" width="335.5" height="53"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -221,13 +263,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="kuj-Ce-zxa" firstAttribute="width" secondItem="7vb-N2-hn1" secondAttribute="width" multiplier="0.75" id="9nx-OV-xvH"/>
                             <constraint firstItem="uge-ow-cV2" firstAttribute="top" secondItem="Tll-fP-rXR" secondAttribute="top" constant="-44" id="A6G-LU-Aqo"/>
                             <constraint firstItem="aql-iW-iMf" firstAttribute="width" secondItem="7vb-N2-hn1" secondAttribute="width" multiplier="0.9" id="BIK-2P-aQE"/>
+                            <constraint firstItem="kuj-Ce-zxa" firstAttribute="top" secondItem="uge-ow-cV2" secondAttribute="bottom" id="Hex-Nm-WEl"/>
                             <constraint firstItem="uge-ow-cV2" firstAttribute="width" secondItem="7vb-N2-hn1" secondAttribute="width" id="Qmh-hP-iHb"/>
+                            <constraint firstItem="kuj-Ce-zxa" firstAttribute="height" secondItem="7vb-N2-hn1" secondAttribute="height" multiplier="0.5" id="R10-wx-4Dy"/>
                             <constraint firstItem="Tll-fP-rXR" firstAttribute="trailing" secondItem="uge-ow-cV2" secondAttribute="trailing" id="d8A-xU-X5y"/>
                             <constraint firstItem="aql-iW-iMf" firstAttribute="centerX" secondItem="Tll-fP-rXR" secondAttribute="centerX" id="gae-cp-YUU"/>
                             <constraint firstItem="uge-ow-cV2" firstAttribute="height" secondItem="7vb-N2-hn1" secondAttribute="height" multiplier="0.15" constant="44" id="j9B-wJ-ya6"/>
                             <constraint firstItem="uge-ow-cV2" firstAttribute="leading" secondItem="Tll-fP-rXR" secondAttribute="leading" id="mdS-yF-0r0"/>
+                            <constraint firstItem="kuj-Ce-zxa" firstAttribute="leading" secondItem="Tll-fP-rXR" secondAttribute="leading" id="qUP-9I-9TV"/>
                             <constraint firstItem="aql-iW-iMf" firstAttribute="height" secondItem="7vb-N2-hn1" secondAttribute="height" multiplier="0.5" id="u96-tP-teD"/>
                             <constraint firstItem="aql-iW-iMf" firstAttribute="centerY" secondItem="Tll-fP-rXR" secondAttribute="centerY" multiplier="0.9" id="wnf-wQ-deo"/>
                         </constraints>
@@ -237,6 +283,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="headerUIView" destination="uge-ow-cV2" id="F1C-Q5-N6y"/>
+                        <outlet property="humansSymptomTableView" destination="kuj-Ce-zxa" id="I1J-bC-N0O"/>
                         <outlet property="symptomsSearchBar" destination="sSc-B1-9cs" id="L7H-Xl-4ou"/>
                         <outlet property="symptomsTableView" destination="aql-iW-iMf" id="G69-td-i34"/>
                     </connections>
@@ -347,6 +394,7 @@
     <resources>
         <image name="46b65a02ff99e7bb4e84d4d3d627a729-sun-sharp-beams-icon-by-vexels" width="512" height="512"/>
         <image name="Screen Shot 2019-08-28 at 2.00.11 AM" width="660" height="680"/>
+        <image name="download (3)" width="225" height="225"/>
         <image name="gym-workout-1100x733" width="1100" height="733"/>
         <image name="images" width="225" height="225"/>
         <image name="medadigeResized" width="1483" height="1188"/>

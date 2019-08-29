@@ -47,13 +47,11 @@ class YearCardUIVView: UIView,UIPickerViewDataSource,UIPickerViewDelegate{
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
         commonInit()
-//        createToolBar()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
-//        createToolBar()
         
         yearPicker.dataSource = self
         yearPicker.delegate = self
@@ -61,19 +59,6 @@ class YearCardUIVView: UIView,UIPickerViewDataSource,UIPickerViewDelegate{
         yearPicker.transform = CGAffineTransform(translationX: 0, y: 70)
         doneButton.transform = CGAffineTransform(translationX: 0, y: 70)
         
-//        let toolBar = UIToolbar()
-//        toolBar.barStyle = UIBarStyle.default
-//        toolBar.isTranslucent = true
-//        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
-//        toolBar.sizeToFit()
-//
-//        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(thing))
-//        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-//        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(thing))
-//
-//        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
-//        toolBar.isUserInteractionEnabled = true
-//        yearTextView.inputAccessoryView = toolBar
     }
     private func commonInit(){
         Bundle.main.loadNibNamed("yearUIView", owner: self, options: nil)
@@ -91,11 +76,6 @@ class YearCardUIVView: UIView,UIPickerViewDataSource,UIPickerViewDelegate{
         border.borderWidth = width
         yearTextView.layer.addSublayer(border)
         yearTextView.layer.masksToBounds = true
-        
-    }
-    
-    
-    @objc func thing(){
         
     }
     

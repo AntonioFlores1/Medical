@@ -26,13 +26,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let mainPage = storyboard.instantiateViewController(withIdentifier: "mainPage") as! ViewController
             window?.rootViewController = mainPage
         } else {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let mainPage = storyboard.instantiateViewController(withIdentifier: "mainPage") as! UITabBarController
-                window?.rootViewController = mainPage
-//            let storyboard = UIStoryboard(name: "NewUser", bundle: nil)
-//            let userViewController = storyboard.instantiateViewController(withIdentifier: "newUser") as! NewUserViewController
-//            window?.rootViewController = UINavigationController(rootViewController: userViewController)
-//            print("broken")
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                let mainPage = storyboard.instantiateViewController(withIdentifier: "mainPage") as! UITabBarController
+//                window?.rootViewController = mainPage
+            let storyboard = UIStoryboard(name: "NewUser", bundle: nil)
+            let userViewController = storyboard.instantiateViewController(withIdentifier: "newUser") as! NewUserViewController
+            window?.rootViewController = UINavigationController(rootViewController: userViewController)
+            print("broken")
         }
         window?.makeKeyAndVisible()
 

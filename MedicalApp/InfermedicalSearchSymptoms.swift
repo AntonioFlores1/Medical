@@ -34,35 +34,3 @@ let symptom = "https://api.infermedica.com/v2/search?phrase=\(keyword)&sex=femal
     }
     
 }
-
-
-class DefaultSymptoms {
-    var symptoms: String
-    init(sypmtoms:String) {
-        self.symptoms = sypmtoms
-    }
-    let allSymptomsList = [
-        DefaultSymptoms.init(sypmtoms: "Abdominal pain"),
-        DefaultSymptoms.init(sypmtoms: "Abdominal pain, severe"),
-        DefaultSymptoms.init(sypmtoms: "Abdominal pain, postprandial"),
-        DefaultSymptoms.init(sypmtoms: "Abdominal pain, sharp and stabbing"),
-        DefaultSymptoms.init(sypmtoms: "Abdominal pain, exacerbating during coughing or movement"),
-        DefaultSymptoms.init(sypmtoms: "abdominal pain on inspiration"),
-        DefaultSymptoms.init(sypmtoms: "Abdominal pain, exacerbating on an empty stomach"),
-        DefaultSymptoms.init(sypmtoms: "Abdominal pain, epigastric"),
-        DefaultSymptoms.init(sypmtoms: "cough"),
-        DefaultSymptoms.init(sypmtoms: "Chest pain"),
-        DefaultSymptoms.init(sypmtoms: "cough"),
-        DefaultSymptoms.init(sypmtoms: "can't breathe"),
-        DefaultSymptoms.init(sypmtoms: "Dermatological changes"),
-        DefaultSymptoms.init(sypmtoms: "crying"),
-        DefaultSymptoms.init(sypmtoms: "Cough, dry"),
-        DefaultSymptoms.init(sypmtoms: "constipation"),
-        DefaultSymptoms.init(sypmtoms: "Fever between 98.6 and 100.4°F (37 and 38°C)"),
-        DefaultSymptoms.init(sypmtoms: "thing"),
-        DefaultSymptoms.init(sypmtoms: "thing"),
-        DefaultSymptoms.init(sypmtoms: "thing"),
-        DefaultSymptoms.init(sypmtoms: "thing"),
-        DefaultSymptoms.init(sypmtoms: "thing"),
-    ]
-}

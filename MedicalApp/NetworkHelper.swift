@@ -48,21 +48,6 @@ public final class NetworkHelper {
             return
         }
         var request = URLRequest(url: url)
-        //request.httpMethod = httpMethod
-//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-       // request.setValue("true", forHTTPHeaderField:"Dev-Mode" )
-        
-//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//        request.addValue("application/json", forHTTPHeaderField: "Accept")
-//        request.addValue("9e4ec077", forHTTPHeaderField:"App-Id" )
-//        request.addValue("8dd49dc91c7b2344949e7b5489323d59", forHTTPHeaderField:"App-Key" )
-//        request.addValue("true", forHTTPHeaderField:"Dev-Mode" )
-//        request.cachePolicy = .reloadIgnoringLocalCacheData
-        
-//        "Accept: application/json" --header "App-Id: 9e4ec077" --header "App-Key: 8dd49dc91c7b2344949e7b5489323d59" --header "Dev-Mode: true"
-
-
         
         let task = URLSession.shared.uploadTask(with: request, from: httpBody) { (data, response, error) in
             if let error = error {

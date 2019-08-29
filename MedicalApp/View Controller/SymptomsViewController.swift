@@ -16,7 +16,16 @@ class SymptomsViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     @IBOutlet weak var symptomsTableView: UITableView!
     
-    var humansSymptoms = [[String]]()
+    @IBOutlet weak var humansSymptomTableView: UITableView!
+    
+    
+    var humansSymptoms = [String](){
+        didSet {
+            DispatchQueue.main.async {
+                self.humansSymptomTableView.reloadData()
+            }
+        }
+    }
     
     var listOfSymptoms = [Symptoms]() {
         didSet {
@@ -48,6 +57,8 @@ class SymptomsViewController: UIViewController,UITableViewDelegate,UITableViewDa
         symptomsTableView.dataSource = self
         symptomsTableView.delegate = self
         symptomsSearchBar.delegate = self
+        humansSymptomTableView.delegate = self
+        humansSymptomTableView.dataSource = self
         
         self.symptomsTableView.isHidden = true
         
@@ -59,14 +70,6 @@ class SymptomsViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 print(appError.errorMessage())
             } else if let symptomData = symptom {
                 self.listOfSymptoms = symptomData
-//                if self.listOfSymptoms.isEmpty {
-//                    self.symptomsTableView.alpha = 0
-//                } else {
-//                    DispatchQueue.main.async {
-//                        self.symptomsTableView.alpha = 1
-//                    }
-//                }
-                
                 dump(self.listOfSymptoms)
             }
         }
@@ -74,18 +77,39 @@ class SymptomsViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listOfSymptoms.count
+        var count:Int?
+    
+        if tableView == self.symptomsTableView {
+            count = listOfSymptoms.count
+        }
+        
+        if tableView == self.humansSymptomTableView {
+            count = humansSymptoms.count
+        }
+        return count!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = symptomsTableView.dequeueReusableCell(withIdentifier: "symptoms", for: indexPath) as? SymptomsTableViewCell else {return UITableViewCell()}
+        var cell:UITableViewCell?
+        
+        if tableView == self.symptomsTableView {
+            guard let cell = symptomsTableView.dequeueReusableCell(withIdentifier: "symptoms", for: indexPath) as? SymptomsTableViewCell else {return UITableViewCell()}
+            let info = listOfSymptoms[indexPath.row]
+            cell.symptomLabel.text = info.label
+            return cell
+        }
+        
+        if tableView == self.humansSymptomTableView {
+            guard let cell = humansSymptomTableView.dequeueReusableCell(withIdentifier: "humanSymptoms", for: indexPath) as? HumanSymptomsTableViewCell else {return UITableViewCell()}
+             let info = humansSymptoms[indexPath.row]
+            print(info)
+            cell.symptoms.text = info
+            return cell
+        }
 
-        let info = listOfSymptoms[indexPath.row]
-        
-        cell.symptomLabel.text = info.label
-        
-        return cell
+        return cell!
+
     }
   
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -98,7 +122,7 @@ class SymptomsViewController: UIViewController,UITableViewDelegate,UITableViewDa
         symptomsTableView.isHidden = true
         symptomsSearchBar.text = ""
         self.symptomsTableView.reloadData()
-        humansSymptoms.append(["\(cellInfo.id), \(cellInfo.label)"])
+        humansSymptoms.append("\(cellInfo.label)")
         print(humansSymptoms)
         
     }

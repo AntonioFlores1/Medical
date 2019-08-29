@@ -29,7 +29,6 @@ class NameCardUIView: UIView,UITextFieldDelegate {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
-//        nameTextField.becomeFirstResponder()
         nameTextField.delegate = self
         nameTextField.text = nameDefaultPlaceholder
         nameTextField.textColor = .lightGray
@@ -55,15 +54,6 @@ class NameCardUIView: UIView,UITextFieldDelegate {
         
     }
     
-//    func useUnderline() {
-//        let border = CALayer()
-//        let borderWidth = CGFloat(1.0)
-//        border.borderColor = UIColor.black.cgColor
-//        border.frame = CGRect(x: 0, y: self.frame.size.height - borderWidth, width: self.frame.size.width, height: self.frame.size.height)
-//        border.borderWidth = borderWidth
-//        self.layer.addSublayer(border)
-//        self.layer.masksToBounds = true
-//    }
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if nameTextField.text == nameDefaultPlaceholder {
             textField.text = ""

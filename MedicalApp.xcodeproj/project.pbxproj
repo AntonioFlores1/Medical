@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3262E67BD6BF53037B36E944 /* Pods_MedicalApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC990FF77DD356B1DC0631FE /* Pods_MedicalApp.framework */; };
+		551F3876231812D100C605D3 /* MedicalAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551F3875231812D100C605D3 /* MedicalAppTests.swift */; };
 		5528F82523076B41006FAF58 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5528F82423076B41006FAF58 /* AppError.swift */; };
 		5528F82723076D17006FAF58 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5528F82623076D17006FAF58 /* NetworkHelper.swift */; };
 		5528F82923076D5C006FAF58 /* InfermedicaDiagnosisAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5528F82823076D5C006FAF58 /* InfermedicaDiagnosisAPI.swift */; };
@@ -15,7 +16,7 @@
 		5528F82F230779C2006FAF58 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5528F82E230779C2006FAF58 /* AuthService.swift */; };
 		5528F83423077AC3006FAF58 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5528F83323077AC3006FAF58 /* User.swift */; };
 		5528F83623078027006FAF58 /* NewUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5528F83523078027006FAF58 /* NewUser.storyboard */; };
-		5528F839230A6BD6006FAF58 /* NewUserScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5528F838230A6BD6006FAF58 /* NewUserScreenViewController.swift */; };
+		5528F839230A6BD6006FAF58 /* NewUserDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5528F838230A6BD6006FAF58 /* NewUserDefaultViewController.swift */; };
 		5528F83B230CB80C006FAF58 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5528F83A230CB80C006FAF58 /* UserInfoViewController.swift */; };
 		5528F83E230CB921006FAF58 /* GenderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5528F83D230CB921006FAF58 /* GenderCollectionViewCell.swift */; };
 		5528F840230CB9F4006FAF58 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5528F83F230CB9F4006FAF58 /* UserInfo.swift */; };
@@ -31,9 +32,10 @@
 		55955A452316122C00181C1C /* SymptomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55955A442316122C00181C1C /* SymptomsViewController.swift */; };
 		55955A4723161A8B00181C1C /* InfermedicalSearchSymptoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55955A4623161A8B00181C1C /* InfermedicalSearchSymptoms.swift */; };
 		55955A4923161D8300181C1C /* SecretKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55955A4823161D8300181C1C /* SecretKey.swift */; };
-		55955A4B23161E2D00181C1C /* UserBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55955A4A23161E2D00181C1C /* UserBasicInfo.swift */; };
+		55955A4B23161E2D00181C1C /* UserBasicInfoForAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55955A4A23161E2D00181C1C /* UserBasicInfoForAPI.swift */; };
 		55955A4D23161F0900181C1C /* SymptomsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55955A4C23161F0900181C1C /* SymptomsModel.swift */; };
 		55955A4F231707E000181C1C /* SymptomsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55955A4E231707E000181C1C /* SymptomsTableViewCell.swift */; };
+		55955A5123174DB500181C1C /* HumanSymptomsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55955A5023174DB500181C1C /* HumanSymptomsTableViewCell.swift */; };
 		55E56864230DFE28002E1767 /* nameUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55E56863230DFE28002E1767 /* nameUIView.xib */; };
 		55E56866230DFFEA002E1767 /* yearUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55E56865230DFFEA002E1767 /* yearUIView.xib */; };
 		55E56868230E000F002E1767 /* YearCardUIVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E56867230E000F002E1767 /* YearCardUIVView.swift */; };
@@ -41,9 +43,22 @@
 		55E5686C230E0429002E1767 /* emialCardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E5686B230E0429002E1767 /* emialCardUIView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		551F3878231812D100C605D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 559177502305E20500583DEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 559177572305E20600583DEC;
+			remoteInfo = MedicalApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0ECBB905A5048C03247AC47D /* Pods-MedicalApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicalApp.debug.xcconfig"; path = "Target Support Files/Pods-MedicalApp/Pods-MedicalApp.debug.xcconfig"; sourceTree = "<group>"; };
 		1A308C3AB6AB8F973B7ACAD8 /* Pods-MedicalApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicalApp.release.xcconfig"; path = "Target Support Files/Pods-MedicalApp/Pods-MedicalApp.release.xcconfig"; sourceTree = "<group>"; };
+		551F3873231812D100C605D3 /* MedicalAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedicalAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		551F3875231812D100C605D3 /* MedicalAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalAppTests.swift; sourceTree = "<group>"; };
+		551F3877231812D100C605D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5528F82423076B41006FAF58 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		5528F82623076D17006FAF58 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		5528F82823076D5C006FAF58 /* InfermedicaDiagnosisAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfermedicaDiagnosisAPI.swift; sourceTree = "<group>"; };
@@ -51,7 +66,7 @@
 		5528F82E230779C2006FAF58 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		5528F83323077AC3006FAF58 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5528F83523078027006FAF58 /* NewUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewUser.storyboard; sourceTree = "<group>"; };
-		5528F838230A6BD6006FAF58 /* NewUserScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserScreenViewController.swift; sourceTree = "<group>"; };
+		5528F838230A6BD6006FAF58 /* NewUserDefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserDefaultViewController.swift; sourceTree = "<group>"; };
 		5528F83A230CB80C006FAF58 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		5528F83D230CB921006FAF58 /* GenderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderCollectionViewCell.swift; sourceTree = "<group>"; };
 		5528F83F230CB9F4006FAF58 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -69,9 +84,10 @@
 		55955A442316122C00181C1C /* SymptomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsViewController.swift; sourceTree = "<group>"; };
 		55955A4623161A8B00181C1C /* InfermedicalSearchSymptoms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfermedicalSearchSymptoms.swift; sourceTree = "<group>"; };
 		55955A4823161D8300181C1C /* SecretKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretKey.swift; sourceTree = "<group>"; };
-		55955A4A23161E2D00181C1C /* UserBasicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBasicInfo.swift; sourceTree = "<group>"; };
+		55955A4A23161E2D00181C1C /* UserBasicInfoForAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBasicInfoForAPI.swift; sourceTree = "<group>"; };
 		55955A4C23161F0900181C1C /* SymptomsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsModel.swift; sourceTree = "<group>"; };
 		55955A4E231707E000181C1C /* SymptomsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsTableViewCell.swift; sourceTree = "<group>"; };
+		55955A5023174DB500181C1C /* HumanSymptomsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanSymptomsTableViewCell.swift; sourceTree = "<group>"; };
 		55E56863230DFE28002E1767 /* nameUIView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = nameUIView.xib; sourceTree = "<group>"; };
 		55E56865230DFFEA002E1767 /* yearUIView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = yearUIView.xib; sourceTree = "<group>"; };
 		55E56867230E000F002E1767 /* YearCardUIVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearCardUIVView.swift; sourceTree = "<group>"; };
@@ -81,6 +97,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		551F3870231812D100C605D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		559177552305E20600583DEC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -99,6 +122,15 @@
 				1A308C3AB6AB8F973B7ACAD8 /* Pods-MedicalApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		551F3874231812D100C605D3 /* MedicalAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				551F3875231812D100C605D3 /* MedicalAppTests.swift */,
+				551F3877231812D100C605D3 /* Info.plist */,
+			);
+			path = MedicalAppTests;
 			sourceTree = "<group>";
 		};
 		5528F81F23076905006FAF58 /* View Controller */ = {
@@ -134,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				55955A4E231707E000181C1C /* SymptomsTableViewCell.swift */,
+				55955A5023174DB500181C1C /* HumanSymptomsTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -153,7 +186,7 @@
 				5528F82823076D5C006FAF58 /* InfermedicaDiagnosisAPI.swift */,
 				55955A4623161A8B00181C1C /* InfermedicalSearchSymptoms.swift */,
 				55955A4823161D8300181C1C /* SecretKey.swift */,
-				55955A4A23161E2D00181C1C /* UserBasicInfo.swift */,
+				55955A4A23161E2D00181C1C /* UserBasicInfoForAPI.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -166,19 +199,19 @@
 			name = "Firebase Helper";
 			sourceTree = "<group>";
 		};
-		5528F83223077AB1006FAF58 /* Model */ = {
+		5528F83223077AB1006FAF58 /* User Model */ = {
 			isa = PBXGroup;
 			children = (
 				5528F83323077AC3006FAF58 /* User.swift */,
 				55955A4C23161F0900181C1C /* SymptomsModel.swift */,
 			);
-			path = Model;
+			path = "User Model";
 			sourceTree = "<group>";
 		};
 		5528F837230A6BA2006FAF58 /* NewUserViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5528F838230A6BD6006FAF58 /* NewUserScreenViewController.swift */,
+				5528F838230A6BD6006FAF58 /* NewUserDefaultViewController.swift */,
 				5528F83A230CB80C006FAF58 /* UserInfoViewController.swift */,
 				5528F83F230CB9F4006FAF58 /* UserInfo.swift */,
 				553309BB230DCAC600B9BC49 /* XIB Related Files */,
@@ -220,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				5591775A2305E20600583DEC /* MedicalApp */,
+				551F3874231812D100C605D3 /* MedicalAppTests */,
 				559177592305E20600583DEC /* Products */,
 				2FF8735FD4F99DE921589802 /* Pods */,
 				D6CBEB74FCE66C39FE06B8D6 /* Frameworks */,
@@ -230,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				559177582305E20600583DEC /* MedicalApp.app */,
+				551F3873231812D100C605D3 /* MedicalAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,7 +272,7 @@
 		5591775A2305E20600583DEC /* MedicalApp */ = {
 			isa = PBXGroup;
 			children = (
-				5528F83223077AB1006FAF58 /* Model */,
+				5528F83223077AB1006FAF58 /* User Model */,
 				5528F82D2307799E006FAF58 /* Firebase Helper */,
 				5528F82323076B23006FAF58 /* Network Helper */,
 				5528F82A23076D60006FAF58 /* API */,
@@ -265,6 +300,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		551F3872231812D100C605D3 /* MedicalAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 551F387C231812D100C605D3 /* Build configuration list for PBXNativeTarget "MedicalAppTests" */;
+			buildPhases = (
+				551F386F231812D100C605D3 /* Sources */,
+				551F3870231812D100C605D3 /* Frameworks */,
+				551F3871231812D100C605D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				551F3879231812D100C605D3 /* PBXTargetDependency */,
+			);
+			name = MedicalAppTests;
+			productName = MedicalAppTests;
+			productReference = 551F3873231812D100C605D3 /* MedicalAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		559177572305E20600583DEC /* MedicalApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5591776A2305E20700583DEC /* Build configuration list for PBXNativeTarget "MedicalApp" */;
@@ -297,6 +350,10 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Pursuit;
 				TargetAttributes = {
+					551F3872231812D100C605D3 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 559177572305E20600583DEC;
+					};
 					559177572305E20600583DEC = {
 						CreatedOnToolsVersion = 10.2;
 					};
@@ -316,11 +373,19 @@
 			projectRoot = "";
 			targets = (
 				559177572305E20600583DEC /* MedicalApp */,
+				551F3872231812D100C605D3 /* MedicalAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		551F3871231812D100C605D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		559177562305E20600583DEC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -391,6 +456,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		551F386F231812D100C605D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				551F3876231812D100C605D3 /* MedicalAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		559177542305E20600583DEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -403,12 +476,13 @@
 				5591775E2305E20600583DEC /* ViewController.swift in Sources */,
 				553309C1230DCB4400B9BC49 /* NameCardUIView.swift in Sources */,
 				5591775C2305E20600583DEC /* AppDelegate.swift in Sources */,
+				55955A5123174DB500181C1C /* HumanSymptomsTableViewCell.swift in Sources */,
 				5528F82F230779C2006FAF58 /* AuthService.swift in Sources */,
 				55955A4923161D8300181C1C /* SecretKey.swift in Sources */,
 				5528F83B230CB80C006FAF58 /* UserInfoViewController.swift in Sources */,
-				55955A4B23161E2D00181C1C /* UserBasicInfo.swift in Sources */,
+				55955A4B23161E2D00181C1C /* UserBasicInfoForAPI.swift in Sources */,
 				5528F82923076D5C006FAF58 /* InfermedicaDiagnosisAPI.swift in Sources */,
-				5528F839230A6BD6006FAF58 /* NewUserScreenViewController.swift in Sources */,
+				5528F839230A6BD6006FAF58 /* NewUserDefaultViewController.swift in Sources */,
 				55E5686C230E0429002E1767 /* emialCardUIView.swift in Sources */,
 				55955A452316122C00181C1C /* SymptomsViewController.swift in Sources */,
 				5528F82523076B41006FAF58 /* AppError.swift in Sources */,
@@ -421,6 +495,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		551F3879231812D100C605D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 559177572305E20600583DEC /* MedicalApp */;
+			targetProxy = 551F3878231812D100C605D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5591775F2305E20600583DEC /* Main.storyboard */ = {
@@ -442,6 +524,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		551F387A231812D100C605D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RFPRDQU6MN;
+				INFOPLIST_FILE = MedicalAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Antonio-Flores.MedicalAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MedicalApp.app/MedicalApp";
+			};
+			name = Debug;
+		};
+		551F387B231812D100C605D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RFPRDQU6MN;
+				INFOPLIST_FILE = MedicalAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Antonio-Flores.MedicalAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MedicalApp.app/MedicalApp";
+			};
+			name = Release;
+		};
 		559177682305E20700583DEC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -599,6 +721,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		551F387C231812D100C605D3 /* Build configuration list for PBXNativeTarget "MedicalAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				551F387A231812D100C605D3 /* Debug */,
+				551F387B231812D100C605D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		559177532305E20500583DEC /* Build configuration list for PBXProject "MedicalApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

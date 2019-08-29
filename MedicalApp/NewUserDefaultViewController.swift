@@ -11,7 +11,6 @@ import UIKit
 
 class NewUserViewController: UIViewController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let navigationBar = self.navigationController?.navigationBar
@@ -23,8 +22,6 @@ class NewUserViewController: UIViewController {
         let color1P = UIColor.init(displayP3Red: 17/255, green: 0/255, blue: 172/255, alpha: 1)
 //        rgb(16,0,177)
 
-
-        
         let layer = CAGradientLayer()
         layer.frame = view.bounds
         layer.colors = [colorVersion1.cgColor,color1P.cgColor]

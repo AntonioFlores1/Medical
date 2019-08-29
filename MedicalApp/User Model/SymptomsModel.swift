@@ -8,10 +8,6 @@
 
 import Foundation
 
-//struct SymptomsModel:Codable {
-//    let symptomsList : [Symptoms]
-//}
-
 struct Symptoms:Codable {
     let id : String
     let label : String
