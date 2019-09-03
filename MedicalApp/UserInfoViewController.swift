@@ -56,7 +56,7 @@ class UserInfoViewController: UIViewController{
                 self.emailCardView.alpha = 0
                 
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let mainPage = storyboard.instantiateViewController(withIdentifier: "mainPage") as! ViewController
+                let mainPage = storyboard.instantiateViewController(withIdentifier: "mainPage") as! UITabBarController
                 self.present(mainPage, animated: true, completion: nil)
             }, completion: nil)
         }

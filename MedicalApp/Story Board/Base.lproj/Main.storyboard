@@ -132,11 +132,11 @@
             </objects>
             <point key="canvasLocation" x="-1601" y="384"/>
         </scene>
-        <!--home-->
+        <!--Navigation Controller-->
         <scene sceneID="2Ec-7C-QzH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h7i-34-nbu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="home" id="ecP-xE-NzD"/>
+                    <tabBarItem key="tabBarItem" systemItem="topRated" id="ecP-xE-NzD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aB5-aW-Vwl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
