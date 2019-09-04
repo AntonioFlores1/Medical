@@ -16,10 +16,19 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var infoSlideView: UIView!
     
+    @IBOutlet weak var dayStatusIcon: UIImageView!
+    
+    @IBOutlet weak var greetingLabel: UILabel!
+    
+    
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        dailySetUp(name: "Alan")
         let navigationBar = self.navigationController?.navigationBar
         navigationBar?.isTranslucent = true
         navigationController?.isNavigationBarHidden = true
@@ -65,7 +74,37 @@ class ViewController: UIViewController {
         infoSlideView.layer.shadowOffset = CGSize.zero
         infoSlideView.layer.shadowRadius = 5
     }
-
-
+    
+    
+    
+    
+    private func dailySetUp(name: String)  {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.timeStyle = .medium
+        formatter.dateStyle = .none
+        let dateArr = formatter.string(from: date).components(separatedBy: " ")
+        let timeStrings = dateArr[0].components(separatedBy: ":")
+        let timeInts = timeStrings.map { return Int($0) }
+        switch dateArr[1] {
+        case "AM":
+            guard let hour = timeInts[0] else { return }
+            if hour < 3 || hour == 12 {
+                greetingLabel.text = "Good Evening \(name)!"
+            } else {
+                greetingLabel.text = "Good Morning! \(name)!"
+            }
+            
+        case "PM":
+            guard let hour = timeInts[0] else { return }
+            if hour > 5 && hour != 12 {
+                greetingLabel.text = "Good Evening \(name)!"
+            } else {
+                greetingLabel.text = "Good Afternoon \(name)!"
+            }
+        default:
+            print("welp")
+        }
+    }
 }
 
