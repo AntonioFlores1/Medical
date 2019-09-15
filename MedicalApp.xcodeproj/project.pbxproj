@@ -23,6 +23,7 @@
 		553309BA230DC58B00B9BC49 /* UserSetUpInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553309B9230DC58B00B9BC49 /* UserSetUpInfo.xib */; };
 		553309BF230DCB2800B9BC49 /* GenderCardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553309BE230DCB2800B9BC49 /* GenderCardUIView.swift */; };
 		553309C1230DCB4400B9BC49 /* NameCardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553309C0230DCB4400B9BC49 /* NameCardUIView.swift */; };
+		55662E1E231FFE4800C93BEA /* ListOfSymptomsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55662E1D231FFE4800C93BEA /* ListOfSymptomsCollectionViewCell.swift */; };
 		5591775C2305E20600583DEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591775B2305E20600583DEC /* AppDelegate.swift */; };
 		5591775E2305E20600583DEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591775D2305E20600583DEC /* ViewController.swift */; };
 		559177612305E20600583DEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5591775F2305E20600583DEC /* Main.storyboard */; };
@@ -73,6 +74,7 @@
 		553309B9230DC58B00B9BC49 /* UserSetUpInfo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserSetUpInfo.xib; sourceTree = "<group>"; };
 		553309BE230DCB2800B9BC49 /* GenderCardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderCardUIView.swift; sourceTree = "<group>"; };
 		553309C0230DCB4400B9BC49 /* NameCardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCardUIView.swift; sourceTree = "<group>"; };
+		55662E1D231FFE4800C93BEA /* ListOfSymptomsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfSymptomsCollectionViewCell.swift; sourceTree = "<group>"; };
 		559177582305E20600583DEC /* MedicalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5591775B2305E20600583DEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5591775D2305E20600583DEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			children = (
 				55955A4E231707E000181C1C /* SymptomsTableViewCell.swift */,
 				55955A5023174DB500181C1C /* HumanSymptomsTableViewCell.swift */,
+				55662E1D231FFE4800C93BEA /* ListOfSymptomsCollectionViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				553309BF230DCB2800B9BC49 /* GenderCardUIView.swift in Sources */,
 				55955A432310B28600181C1C /* AccountViewController.swift in Sources */,
 				5528F83E230CB921006FAF58 /* GenderCollectionViewCell.swift in Sources */,
+				55662E1E231FFE4800C93BEA /* ListOfSymptomsCollectionViewCell.swift in Sources */,
 				5591775E2305E20600583DEC /* ViewController.swift in Sources */,
 				553309C1230DCB4400B9BC49 /* NameCardUIView.swift in Sources */,
 				5591775C2305E20600583DEC /* AppDelegate.swift in Sources */,

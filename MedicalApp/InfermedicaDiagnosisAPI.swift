@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+final class DiagnosisAPI {
+      
+    
+    
+    
+    
+    
+    
+}
