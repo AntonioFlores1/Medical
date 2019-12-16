@@ -11,8 +11,9 @@ import Foundation
 
 final class SymptomsAPI{
     static func ListOfSymptoms(keyword: String, completionHandler: @escaping (AppError?,[Symptoms]?) -> Void) {
-let symptom = "https://api.infermedica.com/v2/search?phrase=\(keyword)&sex=female&max_results=8&type=symptom"
-
+        let symptom = "https://api.infermedica.com/v2/search?phrase=\(keyword)&sex=female&max_results=8&type=symptom"
+        
+        
         NetworkHelper.shared.performDataTask(endpointURLString:symptom, httpMethod: "GET", httpBody: nil) { (appError, data, httpResponse) in
             if let appError = appError {
                 completionHandler(appError,nil)
@@ -25,6 +26,7 @@ let symptom = "https://api.infermedica.com/v2/search?phrase=\(keyword)&sex=femal
             }
             if let data = data {
                 do {
+                    
                     let list = try JSONDecoder().decode([Symptoms].self, from: data)
                     completionHandler(nil,list)
                 } catch {

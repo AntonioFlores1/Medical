@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3262E67BD6BF53037B36E944 /* Pods_MedicalApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC990FF77DD356B1DC0631FE /* Pods_MedicalApp.framework */; };
+		55101544232DFD500021F506 /* DiagnosisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55101543232DFD500021F506 /* DiagnosisModel.swift */; };
+		55101547232ECAA00021F506 /* DiagnosisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55101546232ECAA00021F506 /* DiagnosisViewController.swift */; };
+		55101549232ECCA10021F506 /* DiagnosisUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55101548232ECCA10021F506 /* DiagnosisUIView.swift */; };
+		5510154C232ED2730021F506 /* DiagnosisCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5510154B232ED2730021F506 /* DiagnosisCollectionViewCell.swift */; };
 		551F3876231812D100C605D3 /* MedicalAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551F3875231812D100C605D3 /* MedicalAppTests.swift */; };
 		5528F82523076B41006FAF58 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5528F82423076B41006FAF58 /* AppError.swift */; };
 		5528F82723076D17006FAF58 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5528F82623076D17006FAF58 /* NetworkHelper.swift */; };
@@ -57,6 +61,10 @@
 /* Begin PBXFileReference section */
 		0ECBB905A5048C03247AC47D /* Pods-MedicalApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicalApp.debug.xcconfig"; path = "Target Support Files/Pods-MedicalApp/Pods-MedicalApp.debug.xcconfig"; sourceTree = "<group>"; };
 		1A308C3AB6AB8F973B7ACAD8 /* Pods-MedicalApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicalApp.release.xcconfig"; path = "Target Support Files/Pods-MedicalApp/Pods-MedicalApp.release.xcconfig"; sourceTree = "<group>"; };
+		55101543232DFD500021F506 /* DiagnosisModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosisModel.swift; sourceTree = "<group>"; };
+		55101546232ECAA00021F506 /* DiagnosisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosisViewController.swift; sourceTree = "<group>"; };
+		55101548232ECCA10021F506 /* DiagnosisUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosisUIView.swift; sourceTree = "<group>"; };
+		5510154B232ED2730021F506 /* DiagnosisCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosisCollectionViewCell.swift; sourceTree = "<group>"; };
 		551F3873231812D100C605D3 /* MedicalAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedicalAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		551F3875231812D100C605D3 /* MedicalAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalAppTests.swift; sourceTree = "<group>"; };
 		551F3877231812D100C605D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,6 +134,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		55101545232ECA440021F506 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				55101548232ECCA10021F506 /* DiagnosisUIView.swift */,
+			);
+			name = UIView;
+			sourceTree = "<group>";
+		};
+		5510154A232ED2300021F506 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				55662E1D231FFE4800C93BEA /* ListOfSymptomsCollectionViewCell.swift */,
+				5510154B232ED2730021F506 /* DiagnosisCollectionViewCell.swift */,
+			);
+			name = CollectionViewCell;
+			sourceTree = "<group>";
+		};
 		551F3874231812D100C605D3 /* MedicalAppTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +166,7 @@
 				5591775D2305E20600583DEC /* ViewController.swift */,
 				55955A422310B28600181C1C /* AccountViewController.swift */,
 				55955A442316122C00181C1C /* SymptomsViewController.swift */,
+				55101546232ECAA00021F506 /* DiagnosisViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -164,14 +190,13 @@
 			path = "Story Board";
 			sourceTree = "<group>";
 		};
-		5528F8222307694E006FAF58 /* Cells */ = {
+		5528F8222307694E006FAF58 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
 				55955A4E231707E000181C1C /* SymptomsTableViewCell.swift */,
 				55955A5023174DB500181C1C /* HumanSymptomsTableViewCell.swift */,
-				55662E1D231FFE4800C93BEA /* ListOfSymptomsCollectionViewCell.swift */,
 			);
-			name = Cells;
+			name = TableViewCells;
 			sourceTree = "<group>";
 		};
 		5528F82323076B23006FAF58 /* Network Helper */ = {
@@ -207,6 +232,7 @@
 			children = (
 				5528F83323077AC3006FAF58 /* User.swift */,
 				55955A4C23161F0900181C1C /* SymptomsModel.swift */,
+				55101543232DFD500021F506 /* DiagnosisModel.swift */,
 			);
 			path = "User Model";
 			sourceTree = "<group>";
@@ -217,7 +243,6 @@
 				5528F838230A6BD6006FAF58 /* NewUserDefaultViewController.swift */,
 				5528F83A230CB80C006FAF58 /* UserInfoViewController.swift */,
 				5528F83F230CB9F4006FAF58 /* UserInfo.swift */,
-				553309BB230DCAC600B9BC49 /* XIB Related Files */,
 			);
 			name = NewUserViewController;
 			sourceTree = "<group>";
@@ -280,10 +305,13 @@
 				5528F82323076B23006FAF58 /* Network Helper */,
 				5528F82A23076D60006FAF58 /* API */,
 				5528F81F23076905006FAF58 /* View Controller */,
+				55101545232ECA440021F506 /* UIView */,
 				5528F837230A6BA2006FAF58 /* NewUserViewController */,
+				553309BB230DCAC600B9BC49 /* XIB Related Files */,
 				553309B8230DC49400B9BC49 /* XIB */,
 				5528F83C230CB8EA006FAF58 /* UserInfo Cell */,
-				5528F8222307694E006FAF58 /* Cells */,
+				5528F8222307694E006FAF58 /* TableViewCells */,
+				5510154A232ED2300021F506 /* CollectionViewCell */,
 				5528F8212307693B006FAF58 /* Story Board */,
 				5528F82023076922006FAF58 /* Supporting Files */,
 				559177672305E20700583DEC /* Info.plist */,
@@ -472,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55955A4723161A8B00181C1C /* InfermedicalSearchSymptoms.swift in Sources */,
+				55101549232ECCA10021F506 /* DiagnosisUIView.swift in Sources */,
 				5528F82723076D17006FAF58 /* NetworkHelper.swift in Sources */,
 				553309BF230DCB2800B9BC49 /* GenderCardUIView.swift in Sources */,
 				55955A432310B28600181C1C /* AccountViewController.swift in Sources */,
@@ -485,9 +514,12 @@
 				55955A4923161D8300181C1C /* SecretKey.swift in Sources */,
 				5528F83B230CB80C006FAF58 /* UserInfoViewController.swift in Sources */,
 				55955A4B23161E2D00181C1C /* UserBasicInfoForAPI.swift in Sources */,
+				55101547232ECAA00021F506 /* DiagnosisViewController.swift in Sources */,
+				5510154C232ED2730021F506 /* DiagnosisCollectionViewCell.swift in Sources */,
 				5528F82923076D5C006FAF58 /* InfermedicaDiagnosisAPI.swift in Sources */,
 				5528F839230A6BD6006FAF58 /* NewUserDefaultViewController.swift in Sources */,
 				55E5686C230E0429002E1767 /* emialCardUIView.swift in Sources */,
+				55101544232DFD500021F506 /* DiagnosisModel.swift in Sources */,
 				55955A452316122C00181C1C /* SymptomsViewController.swift in Sources */,
 				5528F82523076B41006FAF58 /* AppError.swift in Sources */,
 				55955A4F231707E000181C1C /* SymptomsTableViewCell.swift in Sources */,

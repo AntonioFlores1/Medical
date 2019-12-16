@@ -37,6 +37,9 @@ class SymptomsViewController: UIViewController {
     }
     
     
+
+    
+    
     lazy var ListOfSymptomsCollectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView.init(frame: self.view.bounds, collectionViewLayout: collectionViewLayout)
@@ -93,7 +96,11 @@ class SymptomsViewController: UIViewController {
     
         view.bringSubviewToFront(symptomsTableView)
         
+        nextPhase.addTarget(self, action: #selector(diagnosisPhase), for:.touchUpInside)
+
     }
+    
+   
     
     func searchSymptoms(_ keyword:String){
         SymptomsAPI.ListOfSymptoms(keyword: keyword) { (appError, symptom) in
@@ -101,7 +108,7 @@ class SymptomsViewController: UIViewController {
                 print(appError.errorMessage())
             } else if let symptomData = symptom {
                 self.symptoms = symptomData
-                dump(self.symptoms)
+//                dump(self.symptoms)
             }
         }
     }
@@ -123,6 +130,11 @@ class SymptomsViewController: UIViewController {
     }
     
     
+    @objc func diagnosisPhase(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let diagnosisVC = storyboard.instantiateViewController(withIdentifier: "Diagnosisid")
+        navigationController?.pushViewController(diagnosisVC, animated: true)
+    }
     
 }
 
@@ -215,5 +227,11 @@ extension SymptomsViewController: UICollectionViewDelegate,UICollectionViewDataS
     @objc func deleteSymptomSelected(){
         
     }
+    
+}
+
+extension SymptomsViewController{
+
+    
     
 }

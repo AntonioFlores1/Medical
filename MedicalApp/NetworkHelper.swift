@@ -39,6 +39,7 @@ public final class NetworkHelper {
         task.resume()
     }
     
+    
     func performUploadTask(endpointURLString: String,
                            httpMethod: String,
                            httpBody: Data?,
@@ -47,7 +48,44 @@ public final class NetworkHelper {
             completionHandler(AppError.badURL("\(endpointURLString)"), nil, nil)
             return
         }
+        
+//        let list = [["id": "s_1193","choice_id": "present"],
+//                    ["id": "s_488","choice_id": "present"],
+//                    ["id": "s_418","choice_id": "present"]]
+//
+//        let body:[String:AnyObject] = ["sex":"male" as AnyObject,
+//                                       "age": 30 as AnyObject,
+//                                       "evidence": list as AnyObject]
+        
+        
+        let body = """
+ {
+            "sex": "male",
+        "age": 30,
+        "evidence": [
+        {
+        "id": "s_1193",
+        "choice_id": "present"
+        },
+        {
+        "id": "s_488",
+        "choice_id": "present"
+        },
+        {
+        "id": "s_418",
+        "choice_id": "present"
+        }
+        ]}
+ """
+        
+        let jsonData = body.data(using: .utf8, allowLossyConversion: false)!
+        
         var request = URLRequest(url: url)
+        request.httpMethod = httpMethod
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("9e4ec077", forHTTPHeaderField:"App-Id" )
+        request.setValue("8dd49dc91c7b2344949e7b5489323d59", forHTTPHeaderField:"App-Key" )
+        request.httpBody = jsonData
         
         let task = URLSession.shared.uploadTask(with: request, from: httpBody) { (data, response, error) in
             if let error = error {
