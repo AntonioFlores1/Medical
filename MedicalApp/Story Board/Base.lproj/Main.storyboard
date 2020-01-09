@@ -102,6 +102,8 @@
                     <navigationItem key="navigationItem" id="0X4-QJ-gAW"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="dayStatusIcon" destination="zcc-P5-IPz" id="A8n-y4-syf"/>
+                        <outlet property="greetingLabel" destination="2Ib-JG-hsh" id="tBy-tf-SxG"/>
                         <outlet property="infoSlideView" destination="Krs-X5-Y4I" id="lMz-Y7-MIj"/>
                         <outlet property="topView" destination="mm1-Po-cGm" id="h04-gm-Fnt"/>
                         <outlet property="trackerView" destination="uui-eB-M5g" id="DrP-II-4MR"/>
