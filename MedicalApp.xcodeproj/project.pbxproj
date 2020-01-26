@@ -41,6 +41,8 @@
 		55E56868230E000F002E1767 /* YearCardUIVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E56867230E000F002E1767 /* YearCardUIVView.swift */; };
 		55E5686A230E0333002E1767 /* emailUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55E56869230E0333002E1767 /* emailUIView.xib */; };
 		55E5686C230E0429002E1767 /* emialCardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E5686B230E0429002E1767 /* emialCardUIView.swift */; };
+		A940B51C23C92CEF00E5FA21 /* HumanSymptomsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A940B51B23C92CEF00E5FA21 /* HumanSymptomsCollectionViewCell.swift */; };
+		A9C8326D23CF9B7D00FA72D2 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C8326C23CF9B7D00FA72D2 /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		55E56867230E000F002E1767 /* YearCardUIVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearCardUIVView.swift; sourceTree = "<group>"; };
 		55E56869230E0333002E1767 /* emailUIView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = emailUIView.xib; sourceTree = "<group>"; };
 		55E5686B230E0429002E1767 /* emialCardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emialCardUIView.swift; sourceTree = "<group>"; };
+		A940B51B23C92CEF00E5FA21 /* HumanSymptomsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanSymptomsCollectionViewCell.swift; sourceTree = "<group>"; };
+		A9C8326C23CF9B7D00FA72D2 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		FC990FF77DD356B1DC0631FE /* Pods_MedicalApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicalApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -167,6 +171,7 @@
 			children = (
 				55955A4E231707E000181C1C /* SymptomsTableViewCell.swift */,
 				55955A5023174DB500181C1C /* HumanSymptomsTableViewCell.swift */,
+				A940B51B23C92CEF00E5FA21 /* HumanSymptomsCollectionViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 		5591775A2305E20600583DEC /* MedicalApp */ = {
 			isa = PBXGroup;
 			children = (
+				A9C8326B23CF947800FA72D2 /* Extensions */,
 				5528F83223077AB1006FAF58 /* User Model */,
 				5528F82D2307799E006FAF58 /* Firebase Helper */,
 				5528F82323076B23006FAF58 /* Network Helper */,
@@ -287,6 +293,14 @@
 				5528F82B230771C0006FAF58 /* GoogleService-Info.plist */,
 			);
 			path = MedicalApp;
+			sourceTree = "<group>";
+		};
+		A9C8326B23CF947800FA72D2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A9C8326C23CF9B7D00FA72D2 /* String+Extension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		D6CBEB74FCE66C39FE06B8D6 /* Frameworks */ = {
@@ -472,9 +486,11 @@
 				5528F82723076D17006FAF58 /* NetworkHelper.swift in Sources */,
 				553309BF230DCB2800B9BC49 /* GenderCardUIView.swift in Sources */,
 				55955A432310B28600181C1C /* AccountViewController.swift in Sources */,
+				A940B51C23C92CEF00E5FA21 /* HumanSymptomsCollectionViewCell.swift in Sources */,
 				5528F83E230CB921006FAF58 /* GenderCollectionViewCell.swift in Sources */,
 				5591775E2305E20600583DEC /* ViewController.swift in Sources */,
 				553309C1230DCB4400B9BC49 /* NameCardUIView.swift in Sources */,
+				A9C8326D23CF9B7D00FA72D2 /* String+Extension.swift in Sources */,
 				5591775C2305E20600583DEC /* AppDelegate.swift in Sources */,
 				55955A5123174DB500181C1C /* HumanSymptomsTableViewCell.swift in Sources */,
 				5528F82F230779C2006FAF58 /* AuthService.swift in Sources */,

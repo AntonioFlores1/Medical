@@ -23,6 +23,7 @@ class UserInfoViewController: UIViewController{
     
     @IBOutlet weak var reasonWhyWeNeedMoreInfoLabl: UILabel!
     
+    var window: UIWindow?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,15 +50,20 @@ class UserInfoViewController: UIViewController{
     
     @objc func emailSetUp(){
         UIView.animate(withDuration: 0.5, delay: 0.8, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-            self.emailCardView.transform = CGAffineTransform.init(translationX: -200, y: 0)
+            self.emailCardView.transform = CGAffineTransform.init(translationX: -350, y: 0)
         }) { (_) in
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-                self.emailCardView.transform = CGAffineTransform.init(translationX: -300, y: -200)
+//                self.emailCardView.transform = CGAffineTransform.init(translationX: -300, y: -200)
                 self.emailCardView.alpha = 0
                 
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let mainPage = storyboard.instantiateViewController(withIdentifier: "mainPage") as! UITabBarController
-                self.present(mainPage, animated: true, completion: nil)
+                
+                self.window = UIWindow(frame: UIScreen.main.bounds)
+                self.window?.rootViewController = mainPage
+                self.window?.makeKeyAndVisible()
+
+//                self.present(mainPage, animated: true, completion: nil)
             }, completion: nil)
         }
         print("did i work?")
@@ -67,10 +73,10 @@ class UserInfoViewController: UIViewController{
     
     @objc func transferToEmailCard(){
         UIView.animate(withDuration: 0.5, delay: 0.8, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-            self.yearCardView.transform = CGAffineTransform.init(translationX: -200, y: 0)
+            self.yearCardView.transform = CGAffineTransform.init(translationX: -350, y: 0)
         }) { (_) in
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-                self.yearCardView.transform = CGAffineTransform.init(translationX: -300, y: -200)
+//                self.yearCardView.transform = CGAffineTransform.init(translationX: -300, y: -200)
                 self.yearCardView.alpha = 0
                 self.emailCardView.transform = CGAffineTransform.init(translationX: 0, y: 0)
                     self.getToKnowYouLabel.text = "\n \n Final Step before you get started"
@@ -80,10 +86,10 @@ class UserInfoViewController: UIViewController{
     
     @objc func userNameText(){
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-            self.nameCardView.transform = CGAffineTransform.init(translationX: -200, y: 0)
+            self.nameCardView.transform = CGAffineTransform.init(translationX: -350, y: 0)
         }) { (_) in
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-                self.nameCardView.transform = CGAffineTransform.init(translationX: -300, y: -200)
+//                self.nameCardView.transform = CGAffineTransform.init(translationX: -300, y: -200)
                 self.nameCardView.alpha = 0
                 self.yearCardView.transform = CGAffineTransform.init(translationX: 0, y: 0)
                 if let name = self.nameCardView.nameTextField.text {
@@ -103,10 +109,10 @@ class UserInfoViewController: UIViewController{
     
     @objc func femaleChoice(){
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-            self.genderCardView.transform = CGAffineTransform.init(translationX: -200, y: 0)
+            self.genderCardView.transform = CGAffineTransform.init(translationX: -350, y: 0)
         }) { (_) in
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-                self.genderCardView.transform = CGAffineTransform.init(translationX: -300, y: -390)
+//                self.genderCardView.transform = CGAffineTransform.init(translationX: -300, y: -390)
                 self.genderCardView.alpha = 0
                 self.nameCardView.transform = CGAffineTransform.init(translationX: 0, y: 0)
                 
@@ -117,10 +123,10 @@ class UserInfoViewController: UIViewController{
     
     @objc func maleChoice(){
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-            self.genderCardView.transform = CGAffineTransform.init(translationX: -200, y: 0)
+            self.genderCardView.transform = CGAffineTransform.init(translationX: -350, y: 0)
         }) { (_) in
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-                self.genderCardView.transform = CGAffineTransform.init(translationX: -200, y: -390)
+//                self.genderCardView.transform = CGAffineTransform.init(translationX: -200, y: -390)
                 self.genderCardView.alpha = 0
                 self.nameCardView.transform = CGAffineTransform.init(translationX: 0, y: 0)
             }, completion: nil)

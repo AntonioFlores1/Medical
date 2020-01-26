@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dailySetUp(name: "Alan")
+        dailySetUp(name: "Antonio")
         let navigationBar = self.navigationController?.navigationBar
         navigationBar?.isTranslucent = true
         navigationController?.isNavigationBarHidden = true
@@ -93,14 +93,17 @@ class ViewController: UIViewController {
                 greetingLabel.text = "Good Evening \(name)!"
             } else {
                 greetingLabel.text = "Good Morning! \(name)!"
+                dayStatusIcon.image = UIImage.init(named: "morning")
             }
             
         case "PM":
             guard let hour = timeInts[0] else { return }
             if hour > 5 && hour != 12 {
                 greetingLabel.text = "Good Evening \(name)!"
+                dayStatusIcon.image = UIImage(named: "evening")
             } else {
                 greetingLabel.text = "Good Afternoon \(name)!"
+                
             }
         default:
             print("welp")
