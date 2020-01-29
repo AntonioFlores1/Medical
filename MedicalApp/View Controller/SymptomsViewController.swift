@@ -46,15 +46,33 @@ class SymptomsViewController: UIViewController,UITableViewDelegate,UITableViewDa
     private lazy var continueButton: UIButton = {
     var button = UIButton()
         button.setTitle("Continue", for: .normal)
+        button.backgroundColor = .red
         button.addTarget(self, action: #selector(diagnosisButton), for: .touchUpInside)
         return button
     }()
     
     
     @objc func diagnosisButton(){
+        if #available(iOS 13.0, *) {
+            guard let diagnosisVC = self.storyboard?.instantiateViewController(identifier: "DiagnosisVC") as? DiagnosisViewController else {
+                fatalError("cant segue")
+            }
+            present(diagnosisVC, animated: true)
+        } else {
+            print("Shittt something went wrong")
+            // Fallback on earlier versions
+        }
         
     }
+
     
+    func continueButtonConstrints(){
+        view.addSubview(continueButton)
+        continueButton.translatesAutoresizingMaskIntoConstraints = false
+        continueButton.topAnchor.constraint(equalTo: humansSymptomCollectionView.bottomAnchor, constant: 5).isActive = true
+        continueButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5).isActive = true
+        humansSymptomCollectionView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
+    }
     func CollectionViewConstraints(){
         view.addSubview(humansSymptomCollectionView)
         view.insertSubview(symptomsTableView, aboveSubview: humansSymptomCollectionView)
@@ -90,7 +108,8 @@ class SymptomsViewController: UIViewController,UITableViewDelegate,UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         CollectionViewConstraints()
-
+        continueButtonConstrints()
+        
         let navigationBar = self.navigationController?.navigationBar
         navigationBar?.isTranslucent = true
         navigationController?.isNavigationBarHidden = true
@@ -216,7 +235,7 @@ class SymptomsViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 return
         }
         symptomsTableView.isHidden = false
-        searchSymptoms(searchText.lowercased())
+//        searchSymptoms(searchText.lowercased())
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -228,7 +247,7 @@ class SymptomsViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 return
         }
         symptomsTableView.isHidden = false
-        searchSymptoms(searchText.lowercased())
+//        searchSymptoms(searchText.lowercased())
 
     }
     

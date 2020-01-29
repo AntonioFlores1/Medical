@@ -45,6 +45,7 @@
 		A9C8326D23CF9B7D00FA72D2 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C8326C23CF9B7D00FA72D2 /* String+Extension.swift */; };
 		A9E68F8523DF9C91002D2996 /* BubbleCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E68F8423DF9C90002D2996 /* BubbleCode.swift */; };
 		A9E68F8723DFFC04002D2996 /* DiagnosisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E68F8623DFFC04002D2996 /* DiagnosisViewController.swift */; };
+		A9E68F8923E12DFA002D2996 /* DiagnosisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E68F8823E12DFA002D2996 /* DiagnosisModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		A9C8326C23CF9B7D00FA72D2 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		A9E68F8423DF9C90002D2996 /* BubbleCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCode.swift; sourceTree = "<group>"; };
 		A9E68F8623DFFC04002D2996 /* DiagnosisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosisViewController.swift; sourceTree = "<group>"; };
+		A9E68F8823E12DFA002D2996 /* DiagnosisModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosisModel.swift; sourceTree = "<group>"; };
 		FC990FF77DD356B1DC0631FE /* Pods_MedicalApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicalApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -215,6 +217,7 @@
 			children = (
 				5528F83323077AC3006FAF58 /* User.swift */,
 				55955A4C23161F0900181C1C /* SymptomsModel.swift */,
+				A9E68F8823E12DFA002D2996 /* DiagnosisModel.swift */,
 			);
 			path = "User Model";
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				5528F83E230CB921006FAF58 /* GenderCollectionViewCell.swift in Sources */,
 				5591775E2305E20600583DEC /* ViewController.swift in Sources */,
 				553309C1230DCB4400B9BC49 /* NameCardUIView.swift in Sources */,
+				A9E68F8923E12DFA002D2996 /* DiagnosisModel.swift in Sources */,
 				A9C8326D23CF9B7D00FA72D2 /* String+Extension.swift in Sources */,
 				5591775C2305E20600583DEC /* AppDelegate.swift in Sources */,
 				55955A5123174DB500181C1C /* HumanSymptomsTableViewCell.swift in Sources */,

@@ -10,21 +10,31 @@ import UIKit
 
 class DiagnosisViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    var diagnosisQuestion = [Diagnosis]() {
+        didSet {
+            print("We made it")
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        diagnosisAPI()
     }
-    */
 
+    func diagnosisAPI(){
+        DiagnosisAPI.diagnosis { (result) in
+            switch result {
+            case .failure(let error):
+                print("You fucked up \(error)")
+            case .success(let data):
+                self.diagnosisQuestion = [data]
+                dump(data)
+                print("We here")
+            }
+        }
+}
+
+    
+    
 }

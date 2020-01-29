@@ -26,8 +26,8 @@ public final class NetworkHelper {
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("9e4ec077", forHTTPHeaderField:"App-Id" )
-        request.setValue("8dd49dc91c7b2344949e7b5489323d59", forHTTPHeaderField:"App-Key" )
+        request.setValue(SecretKeys.AppId, forHTTPHeaderField:"App-Id" )
+        request.setValue(SecretKeys.AppKey, forHTTPHeaderField:"App-Key" )
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 completionHandler(AppError.networkError(error), nil, response as? HTTPURLResponse)
@@ -48,7 +48,10 @@ public final class NetworkHelper {
             return
         }
         var request = URLRequest(url: url)
-        
+        request.httpMethod = httpMethod
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(SecretKeys.AppId, forHTTPHeaderField:"App-Id" )
+        request.setValue(SecretKeys.AppKey, forHTTPHeaderField:"App-Key" )
         let task = URLSession.shared.uploadTask(with: request, from: httpBody) { (data, response, error) in
             if let error = error {
                 completionHandler(AppError.networkError(error), nil, response as? HTTPURLResponse)
